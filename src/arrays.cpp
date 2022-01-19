@@ -28,7 +28,7 @@ void reverseArray(int* arr, int size){
 }
 
 
-int* maxandMin(int* arr, int size){
+int* maxandMinNaive(int* arr, int size){
     static int ans[] = {INT_MIN, INT_MAX}; // to first: largest and second: smallest
     for(int i = 0; i < size; i++){
         if(arr[i]>ans[0]){
@@ -40,4 +40,50 @@ int* maxandMin(int* arr, int size){
     }
 
     return ans;
+}
+
+
+int* maxandMinOPT(int* arr, int size){
+    bool odd = (size %2 == 0)? false: true;
+
+    static int ans[] = {INT_MIN, INT_MAX};
+    int max = arr[0];
+    int min = arr[1];
+
+    if(odd) size--;
+
+    for(int i = 0; i < size; i=i+2) {
+        int maximum ,minimum;
+        if(arr[i] > arr[i+1] ){
+            maximum = arr[i];
+            minimum = arr[i+1];
+        }else{
+            maximum = arr[i+1];
+            minimum = arr[i];
+        }
+
+        if (maximum > max) {        // 2nd comparison
+            max = maximum;
+        }
+ 
+        // update min
+        if (minimum < min) {        // 3rd comparison
+            min = minimum;
+        }
+    }
+    if (odd) {                        // comparison
+
+    if (arr[size] > max) {         // extra comparison for an odd element
+        max = arr[size];
+    }
+
+    if (arr[size] < min) {         // extra comparison for an odd element
+        min = arr[size];
+    }
+
+    }
+    ans[0] = max;
+    ans[1] = min;
+    return ans;
+
 }

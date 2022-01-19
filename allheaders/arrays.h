@@ -4,5 +4,6 @@ void printArr(int* arr, int size);
 void reverseArray(int* arr, int size);
 
 // finding minimum and maximun in a Array
-int* maxandMin(int* arr, int size);
+int* maxandMinNaive(int* arr, int size);
 
+int* maxandMinOPT(int* arr, int size);
