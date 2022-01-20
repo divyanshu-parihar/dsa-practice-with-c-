@@ -1,6 +1,5 @@
 #include "../allheaders/arrays.h"
-#include <climits>
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 void printArr(int* arr, int size){
@@ -86,4 +85,10 @@ int* maxandMinOPT(int* arr, int size){
     ans[1] = min;
     return ans;
 
+}
+
+// nlogn solution with sorting for kthmaxmin problem.
+int* kthmaxandmin(int* arr , int size, int k ){
+    sort(arr,arr+size);
+    return new int[2]{arr[size - k ], arr[k-1]};
 }
