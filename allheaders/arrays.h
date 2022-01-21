@@ -12,3 +12,6 @@ int* kthmaxandmin(int* arr, int size,int k);
 
 // optimal way of solving kthmaxandmin problem
 int* kthmaxandminOPT(int* arr, int size,int k);
+
+//Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo
+int* sortonetwothrees(int* arr, int size);

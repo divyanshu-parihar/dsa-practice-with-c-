@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int arr[] = {5,4,3,2,1};
-    int *ans = kthmaxandminOPT(arr,5,2);
-    printArr(ans,1);
+    int arr[] = {0,1,1,1,0,0,2,2,1,1};
+    int* result = sortonetwothrees(arr,10);
+    printArr(result, 10);
 } 

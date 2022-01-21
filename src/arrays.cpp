@@ -106,3 +106,33 @@ int* kthmaxandminOPT(int * arr, int size, int k){
 
     return new int[1]{-q.top()};
 }
+
+// This seems to be Time : O(N) and Space : O(N)
+int* sortonetwothrees(int* arr, int size){
+    int sizes[] = {0,0,0};
+    int ans[size]; // here we are using O(N) memory 
+    for(int i = 0; i < size; i++) {
+        if(arr[i] == 0){
+            sizes[0] +=1;
+
+        }
+        if(arr[i] == 1){
+            sizes[1] +=1;
+
+        }if(arr[i] == 2){
+            sizes[2] +=1;
+            
+        }
+    }
+    int count = 0;
+    for(int i = 0; i < 3; i++){
+        for(int j = 0 ; j < sizes[i]; j++){
+            ans[count] = i+0;
+            count++;
+        }
+    }
+    for(int i = 0; i< size; i++){
+        arr[i] = ans[i];
+    }
+    return arr;
+}
