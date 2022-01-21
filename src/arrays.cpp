@@ -92,3 +92,17 @@ int* kthmaxandmin(int* arr , int size, int k ){
     sort(arr,arr+size);
     return new int[2]{arr[size - k ], arr[k-1]};
 }
+
+
+int* kthmaxandminOPT(int * arr, int size, int k){
+    priority_queue <int> q; // By Default MaxHeap
+    for(int i = 0; i < size; i++){
+        q.push(-arr[i]);
+        if(q.size() > k){
+            q.pop();
+        } 
+
+    }
+
+    return new int[1]{-q.top()};
+}

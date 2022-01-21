@@ -9,3 +9,6 @@ int* maxandMinNaive(int* arr, int size);
 int* maxandMinOPT(int* arr, int size);
 // Find the "Kth" max and min element of an array
 int* kthmaxandmin(int* arr, int size,int k);
+
+// optimal way of solving kthmaxandmin problem
+int* kthmaxandminOPT(int* arr, int size,int k);
