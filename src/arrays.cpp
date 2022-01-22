@@ -153,3 +153,29 @@ int* moveallnumbers(int* arr , int size){
     }
     return arr; 
 }
+
+int* unionoftwoarrays(int* arr1, int* arr2, int m, int n){
+    int first = 0;
+    int second =0;
+    sort(arr1, arr1+m); // O(mlogm) 
+    sort(arr2, arr2+n); // O(nlogn)
+    static int ans[100];
+    int i = 0;
+    while(i < min(m,n)) { // O(N)
+        if(arr1[first] == arr2[second]){
+            ans[i]= arr1[first];
+            first++;
+            second++;
+            i++;
+        }else{
+            if(arr1[first] < arr2[second]) {
+                first++;
+            }else{
+                second++;
+            }
+        }
+    }
+
+    
+    return ans;
+}

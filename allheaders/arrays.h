@@ -18,3 +18,6 @@ int* sortonetwothrees(int* arr, int size);
 
 // An array contains both positive and negative numbers in random order. Rearrange the array elements so that all negative numbers appear before all positive numbers.
 int* moveallnumbers(int* arr, int size);
+
+// Union of the two arrays can be defined as the set containing distinct elements from both the arrays. If there are repetitions, then only one occurrence of element should be printed in the union.
+int* unionoftwoarrays(int* arr1, int* arr2, int m, int n);
