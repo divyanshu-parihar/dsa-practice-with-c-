@@ -15,3 +15,6 @@ int* kthmaxandminOPT(int* arr, int size,int k);
 
 //Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo
 int* sortonetwothrees(int* arr, int size);
+
+// An array contains both positive and negative numbers in random order. Rearrange the array elements so that all negative numbers appear before all positive numbers.
+int* moveallnumbers(int* arr, int size);

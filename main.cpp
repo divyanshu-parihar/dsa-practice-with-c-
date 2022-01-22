@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int arr[] = {0,1,1,1,0,0,2,2,1,1};
-    int* result = sortonetwothrees(arr,10);
+    int arr[] = {-1, -2, -3, -4, 1, 2, 3, 4, 5,-6};
+    int* result = moveallnumbers(arr,10);
     printArr(result, 10);
 } 

@@ -136,3 +136,20 @@ int* sortonetwothrees(int* arr, int size){
     }
     return arr;
 }
+
+
+
+int* moveallnumbers(int* arr , int size){
+    int unitl_here = 0;
+
+    while(arr[unitl_here] >= 0){
+        unitl_here++;
+    }
+    for(int i = 0; i < size; i++) {
+        if(arr[i] < 0) {
+            swap(arr[unitl_here], arr[i]);
+            unitl_here++;
+        }
+    }
+    return arr; 
+}
