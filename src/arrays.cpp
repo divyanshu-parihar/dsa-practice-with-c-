@@ -179,3 +179,62 @@ int* unionoftwoarrays(int* arr1, int* arr2, int m, int n){
     
     return ans;
 }
+
+
+int* cyclicrotatearray(int* arr, int size) {
+    int i = size-1;
+    while(i-1 >=0){ // O(N)
+        swap(arr[i],arr[i-1]);
+        i--;
+    }
+    return arr;
+}
+
+
+int maxsumsubarrayNAIVE(int* arr, int size) { // O(N^2)
+    int max_sum = INT_MIN;
+    for (int i = 0; i < size; i++)
+    {
+        int curr = 0;
+        for (int j = i; j < size; j++)
+        {
+            curr+= arr[j];
+        }
+        max_sum = max(curr,max_sum);
+    }
+
+    return max_sum;
+    
+}
+int maxsumsubarrayOPT(int* arr, int size) {
+    int curr = 0;
+    int ans = INT_MIN;
+    for (int i = 0; i < size; i++)
+    {
+        curr += arr[i];
+        ans = max(ans, curr);
+        if(curr < 0) {
+            curr = 0;
+        }
+
+    }
+    return ans;
+    
+}
+
+// int getDiffMin(int* arr, int size, int k){
+//     for(int i = 0; i < size; i++) {
+//        int first =arr[i]+k;
+//        int second =arr[i]-k;
+
+//        arr[i] = min(first,second) > 0 ? max(first,second): min(first,second);
+//     }
+//     int MAX = INT_MIN;
+//     int MIN = INT_MAX;
+
+//     for(int i = 0; i < size; i++) {
+//         MAX = max(MAX,arr[i]);
+//         MIN = min(MIN,arr[i]);
+//     }
+//     return MAX - MIN;
+// }

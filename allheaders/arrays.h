@@ -21,3 +21,16 @@ int* moveallnumbers(int* arr, int size);
 
 // Union of the two arrays can be defined as the set containing distinct elements from both the arrays. If there are repetitions, then only one occurrence of element should be printed in the union.
 int* unionoftwoarrays(int* arr1, int* arr2, int m, int n);
+
+// Given an array, rotate the array by one position in clock-wise direction.
+int* cyclicrotatearray(int* arr, int size);
+
+// Given an array Arr[] of N integers. Find the contiguous sub-array(containing at least one number) which has the maximum sum and return its sum. (Kadane's algorithm )
+int maxsumsubarrayNAIVE(int* arr, int size);
+
+// OPT approach for for above solution : Kadane's algorithm
+int maxsumsubarrayOPT(int* arr, int size);
+
+// Given an array arr[] denoting heights of N towers and a positive integer K, you have to modify the height of each tower either by increasing or decreasing them by K only once. After modifying, height should be a non-negative integer. 
+// Find out the minimum possible difference of the height of shortest and longest towers after you have modified each tower.
+int getDiffMin(int* arr, int size, int k);
