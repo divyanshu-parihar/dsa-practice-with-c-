@@ -222,19 +222,20 @@ int maxsumsubarrayOPT(int* arr, int size) {
     
 }
 
-// int getDiffMin(int* arr, int size, int k){
-//     for(int i = 0; i < size; i++) {
-//        int first =arr[i]+k;
-//        int second =arr[i]-k;
+int getDiffMin(int* arr, int size, int k){
+    
+    sort(arr,arr+size);
+    int max_ = arr[size-1];
+    int min_ = arr[0];
+    int res = max_ - min_;
 
-//        arr[i] = min(first,second) > 0 ? max(first,second): min(first,second);
-//     }
-//     int MAX = INT_MIN;
-//     int MIN = INT_MAX;
+    for (int i = 1; i < size; i++)
+    {
+        min_ = min(arr[0]+k, arr[i]-k);
+        max_ = max(arr[size-1]-k, arr[i]+k);
+        
+        res = min(res,max_-min_);
+    }
 
-//     for(int i = 0; i < size; i++) {
-//         MAX = max(MAX,arr[i]);
-//         MIN = min(MIN,arr[i]);
-//     }
-//     return MAX - MIN;
-// }
+    return res; 
+}
