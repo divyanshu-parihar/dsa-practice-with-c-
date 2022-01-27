@@ -34,3 +34,8 @@ int maxsumsubarrayOPT(int* arr, int size);
 // Given an array arr[] denoting heights of N towers and a positive integer K, you have to modify the height of each tower either by increasing or decreasing them by K only once. After modifying, height should be a non-negative integer. 
 // Find out the minimum possible difference of the height of shortest and longest towers after you have modified each tower.
 int getDiffMin(int* arr, int size, int k);
+
+// Given an array of N integers arr[] where each element represents the max number of steps that can be made forward from that element. Find the minimum number of jumps to reach the end of the array (starting from the first element). If an element is 0, then you cannot move through that element.
+// Note: Return -1 if you can't reach the end of the array.
+int minJumps(int* arr, int size);
+

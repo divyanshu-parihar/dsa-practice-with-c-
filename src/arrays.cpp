@@ -239,3 +239,30 @@ int getDiffMin(int* arr, int size, int k){
 
     return res; 
 }
+
+int minJumps(int* arr, int size){
+    int count = 0;
+    int i=0;
+    while( i < size){
+        cout << i <<endl;
+        if(arr[i]==0 && i!=size-1){
+            return -1;
+        }
+        for (int k = i; k <= i + arr[i]; k++)
+        {
+            int curr=arr[i]-arr[k];
+            if(k > size){
+                continue;
+            }
+            if(size-arr[k]<curr){
+                curr = k;
+            }
+
+            i = curr;
+            count++;
+            continue;
+        }
+        i++;
+    }
+    return count;
+}
