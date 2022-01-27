@@ -266,3 +266,23 @@ int minJumps(int* arr, int size){
     }
     return count;
 }
+
+
+int sockMerchant(int n, vector<int> ar) {
+    if(n < 2){
+        return 0;
+    }
+    vector<int> result(101);
+    for(int i = 0; i < n; i++) {
+        result[ar.at(i)]++;
+    }
+    int ans = 0 ;
+    
+    for (int i = 0; i < result.size(); i++) {
+        if(result[i] >=2){
+            ans+= result[i]/2;
+        }
+    }
+    
+    return ans;
+}

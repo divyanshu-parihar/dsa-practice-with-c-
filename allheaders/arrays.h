@@ -39,3 +39,6 @@ int getDiffMin(int* arr, int size, int k);
 // Note: Return -1 if you can't reach the end of the array.
 int minJumps(int* arr, int size);
 
+// Sales by Match
+int sockMerchant(int n, vector<int> ar);
+
