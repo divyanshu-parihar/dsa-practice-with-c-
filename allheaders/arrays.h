@@ -51,3 +51,6 @@ int countingValleys(int steps, string path);
 
 // Jumping on the Clouds
 int jumpingOnClouds(vector<int> c);
+
+// There is a string, , of lowercase English letters that is repeated infinitely many times. Given an integer, , find and print the number of letter a's in the first  letters of the infinite string.
+long repeatedString(string s, long n);
