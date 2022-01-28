@@ -304,3 +304,24 @@ int hourglassSum(vector<vector<int>> arr) {
     }
     return result;
 }
+
+
+int countingValleys(int steps, string path) {
+    int count = 0;
+    int currlvl = 0;
+    int wasInDepth = 0;
+    for(int i = 0; i < steps; i++){
+        if(path.at(i)=='D'){
+            currlvl--;
+        }else{
+            currlvl++;
+        }
+        if(currlvl < 0){
+            wasInDepth = 1;
+        }
+        if(currlvl > 0) wasInDepth = 0;
+        if(currlvl==0 && wasInDepth) {count++;}
+    }
+    
+    return count;
+}

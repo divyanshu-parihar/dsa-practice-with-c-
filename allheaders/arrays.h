@@ -45,3 +45,6 @@ int sockMerchant(int n, vector<int> ar);
 
 //here are  hourglasses in . An hourglass sum is the sum of an hourglass' values. Calculate the hourglass sum for every hourglass in , then print the maximum hourglass sum. The array will always be 6x6.
 int hourglassSum(vector<vector<int>> arr);
+
+// Counting Valleys-hackerrank
+int countingValleys(int steps, string path);
