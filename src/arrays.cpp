@@ -325,3 +325,19 @@ int countingValleys(int steps, string path) {
     
     return count;
 }
+
+int jumpingOnClouds(vector<int> c) {
+    int jumps = 0;
+    int i = 0;
+    int n = c.size();
+    while(i != n-1){
+            jumps++;
+        if((i+2 < n) && c[i+2] != 1){
+            i = i+2;
+            
+        }else if( (i+1 < n )&& c[i+1] == 0){
+            i++;
+        }   
+    }
+    return jumps;
+}

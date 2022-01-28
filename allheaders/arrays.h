@@ -48,3 +48,6 @@ int hourglassSum(vector<vector<int>> arr);
 
 // Counting Valleys-hackerrank
 int countingValleys(int steps, string path);
+
+// Jumping on the Clouds
+int jumpingOnClouds(vector<int> c);
