@@ -286,3 +286,21 @@ int sockMerchant(int n, vector<int> ar) {
     
     return ans;
 }
+
+int hourglassSum(vector<vector<int>> arr) {
+    int result = INT_MIN;
+    int n = 6;
+    for(int i = 1; i < 5; i++){
+        for(int j = 1; j < 5; j++){
+            int curr=arr[i][j];
+            int directions[6][2] = {{-1,-1},{-1,0},{-1,1},{1,-1},{1,0},{1,1}};
+            for(int k = 0; k < 6 ; k++){
+               int newX = i + directions[k][0];
+               int newY = j + directions[k][1];
+               curr+= arr[newX][newY];
+            }
+            result = max(result,curr);
+        } 
+    }
+    return result;
+}
