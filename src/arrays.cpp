@@ -345,49 +345,11 @@ int jumpingOnClouds(vector<int> c) {
 
 long repeatedString(string s, long n) {
     
-    // if(s.length() == 1 && s[0] == 'a') return n;
-    // int i = 0;
-    // long count = 0;
-    // string str = "";
-    // long result = 0;
-    // while(count!=n){
-    //     // cout << s[i];
-    //     str = str+s[i];
-    //     if(str[count]=='a') result++;
-    //     i++;
-    //     if(i == s.length()) {
-    //         i = 0;
-    //     };
-    //     count++;
-        
-    // }
-    // // for(int i = 0; i < str.length(); i++){
-    // //     if(str[i]=='a') result++;
-    // // }
-    // return result;
-    // aba  abaabaa
-    //  2nd approach
+   // basic checks 
     if(s.length() == 1 && s[0] == 'a') return n;
     if(s.length() == 1 && s[0] != 'a') return 0;
     
-    
-    // long count = 0;
-    // int curr = 0;
-    // long ans = 0;
-    // while(count < n){
-    //     if(s[curr] == 'a'){
-    //         ans++;
-    //     }
-    //     count++;
-        
-    //     if(curr == s.length()-1){
-    //         curr = 0;
-    //     }else{
-    //         curr++;
-    //     }
-    // }
-    
-    // return ans ;
+ 
     
     
     int as = 0;
