@@ -1,5 +1,7 @@
 // utility functions
 #include<bits/stdc++.h>
+using namespace std;
+
 void printArr(int* arr, int size);
 // reversing Array definations
 void reverseArray(int* arr, int size);
