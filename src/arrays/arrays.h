@@ -59,6 +59,3 @@ long repeatedString(string s, long n);
 
 // New Year Chaos - Hackerrank
 void minimumBribes(vector<int> A) ;
-
-// // find given sum subarray in the array.
-// void getSumSubarray(int* arr,int size,int s);
